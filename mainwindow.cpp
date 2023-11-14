@@ -2,11 +2,16 @@
 #include "ui_mainwindow.h"
 
 MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+    : QMainWindow(parent),
+    ui(new Ui::NotePad)
 {
+
+    qDebug() << "Window title set to:" << windowTitle();  // Debugging statement
     ui->setupUi(this);
     this->setCentralWidget(ui->textEdit);
+
+    // change the title to NotePad
+    setWindowTitle("NotePad");
 }
 
 MainWindow::~MainWindow()

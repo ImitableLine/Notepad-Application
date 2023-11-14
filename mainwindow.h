@@ -9,7 +9,7 @@
 #include <QPrintDialog>
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class MainWindow; }
+namespace Ui { class NotePad; }
 QT_END_NAMESPACE
 
 class MainWindow : public QMainWindow
@@ -19,6 +19,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
 
 private slots:
     void on_actionNew_triggered();
@@ -42,7 +43,7 @@ private slots:
     void on_actionRedo_triggered();
 
 private:
-    Ui::MainWindow *ui;
+    Ui::NotePad *ui;
     QString currentfile = "";
 };
 #endif // MAINWINDOW_H
